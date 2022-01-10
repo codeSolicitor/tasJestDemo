@@ -1,0 +1,14 @@
+framework: jest      # Mention the testing framework mocha, jest or jasmine.
+preRun:
+  command:
+    - npm ci          # Mention pre-run steps here
+postMerge:
+  pattern:
+    - "./src/index.test.js" # Glob pattern to path where tests that should run post-merge are written.
+preMerge:
+  pattern:
+    - "./test/**/*.js" # Glob pattern to path where tests that should run pre-merge are written.
+postRun:
+  command:
+    - node --version # Mention post-run steps here
+version: 1.0
